@@ -126,12 +126,12 @@ body {
 #restoredPubKey{
   position: relative;
   z-index: 2;
-  color: black;
+  color: #292929;
 }
 #restoredSecKey{
   position: relative;
   z-index: 2;
-  color: black;
+  color: #292929;
 }
 #secretKeyInput{
 
