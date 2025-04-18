@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Solana Keypair Tool</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="blob"> <div id="blur"></div>
+  </div>
+  <div class="container">
+    <h1>🔑 Solana Keypair Utilities</h1>
+  
+   
+  
+
+    <!-- ✅ COMPONENT 1: Generate Keypair -->
+    <section>
+      <h2>🛠️ Generate Keypair</h2>
+      <button id="generateBtn">Generate Keypair</button>
+      <div id="generatedOutput" style="margin-top: 20px;">
+        <div id="keypairDetails" style="display:none;">
+          <p><strong>🔓 Public Key:</strong></p>
+          <p id="pubKeyValue" style="word-break: break-all;"></p>
+
+          <p><strong>🗝️ Secret Key:</strong></p>
+          <!-- <p id="secKeyValue" rows="4" readonly style="width: 100%; max-width: 500px;"></p> -->
+          <h3 id="secKeyValue"></h3>
+
+          <p>✅ Finished! Copy the secret key above to test restore below ⬇️</p>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- ✅ COMPONENT 2: Restore Keypair -->
+    <section>
+      <h2>🔍 Restore Keypair from Secret</h2>
+      <textarea id="secretKeyInput" rows="4" placeholder="Paste your 64-number secret key array..."></textarea>
+      <br/>
+      <button id="inspectBtn">Inspect Keypair</button>
+      <div id="inspectOutput" style="display:none; margin-top: 20px;">
+        <p><strong>🔓 Public Key:</strong> <span id="restoredPubKey"></span></p>
+        <p><strong>🗝️ Secret Key:</strong> <span id="restoredSecKey"></span></p>
+        <p>✅ Restored Successfully!</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- Load Solana web3.js -->
+  <script src="https://unpkg.com/@solana/web3.js@1.98.0/lib/index.iife.js"></script>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
